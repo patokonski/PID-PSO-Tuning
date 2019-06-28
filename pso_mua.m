@@ -1,5 +1,6 @@
 %% ALGORYTM PSO
 
+
 function [y iter g] = pso_mua(l_i, S, omega, phi_p, phi_g, rysowanie)
 % l_i - liczba iteracji
 % S - liczebnosc populacji
