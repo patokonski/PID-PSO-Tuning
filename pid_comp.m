@@ -20,15 +20,15 @@ x2      =   zeros(1,k_stop);
 e       =   zeros(1,k_stop);
 y_zad   =   [0.5*ones(1,k_stop/4) -0.35*ones(1,k_stop/4) 0.4*ones(1,k_stop/4) -1.2*ones(1,k_stop/4)]; 
 
-%% Regulator PID nastrojony metod¹ Zieglera-Nicholsa
+%% Regulator PID nastrojony metodÂ¹ Zieglera-Nicholsa
 T=1;  
-Tosc = 16.8;  %(192-24)/10    <-- uœrednione dla 10 okresów
+Tosc = 16.8;  %(192-24)/10    <-- uÅ“rednione dla 10 okresÃ³w
 kkr = 3.7;
 k_p = 0.6*kkr;
 Ti_p = 0.5*Tosc;
 Td_p  = 0.125*Tosc;
 
-% Niegasn¹ce oscylacje:
+% NiegasnÂ¹ce oscylacje:
 % Ti_p = inf;
 % Td_p = 0;
 % k_p = kkr;
@@ -70,7 +70,7 @@ pause;
   
 %% Regulator PID nastrojony PSO
 % 
-%parametry regulatora obliczone w pliku "Zadanie_2_strojenie_PSO"
+%parametry regulatora obliczone w pliku pid_pso_tun.m
 r0 = 1.2230
 r1 = -1.4218
 r2 = 0.2628
@@ -111,7 +111,7 @@ clf
 
 subplot(2,1,1)
 plot(y);
-title('Porownanie przebiegow sygnalow wyjsciowych i wejsciowych regulatora PID nastrojonego dwoma metodami')
+title('Porownanie przebiegow sygnalow wyjsciowych i wejsciowych regulatora PID nastrojonego dwiema metodami')
 hold on
 plot(y1,'m')
 hold on
